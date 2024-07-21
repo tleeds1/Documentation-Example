@@ -1,0 +1,133 @@
+html, body {
+    min-width: 290px;
+    color: #4d4e53;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+nav {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+#navbar {
+    position: fixed;
+    min-width: 290px;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    border-right: solid;
+    border-color: 1px solid whitesmoke;
+}
+nav header {
+    border: 0;
+    margin: 30px auto;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid whitesmoke;
+    padding-bottom: 20px;
+}
+.nav-link {
+    text-decoration: none;
+    color: whitesmoke;
+}
+nav>ul>li:hover {
+    color: white;
+    background-color: rgba(237, 243, 243, 0.4);
+}
+#navbar > ul {
+    list-style-type: none;
+    padding: 20px;
+}
+#navbar > ul > li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 2px solid whitesmoke;
+}
+#navbar > ul > li > a {
+    color:#fff;
+    z-index: 999;
+}
+#navbar > ul > li:first-of-type {
+    padding-top: 0;
+    margin-top: -20px;
+}
+#main-doc {
+    position: absolute;
+    margin-left: 310px;
+    padding: 20px;
+    max-width: calc(100% - 330px);
+    box-sizing: border-box;
+    overflow: auto;
+    overflow-x: hidden;
+}
+main {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+header {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.Introduction header {
+    font-size: 36px;   
+}
+a {
+    text-decoration: none;
+    color: aqua;
+}
+a:visited {
+    color:aqua;
+    
+}
+a:hover {
+    color: wheat;
+    z-index: 10;
+}
+
+code {
+    background-color: #4d4e53;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    justify-content: left;
+    padding-left: 20px;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.wrong-case {
+    background-color: rgb(206, 52, 52);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 720px) {
+    #navbar {
+        display: none;
+    }
+
+    #main-doc {
+        margin-left: 0;
+        max-width: 100%;
+    }
+}

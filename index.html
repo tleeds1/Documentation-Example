@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="documentation.css"></link>
+        <title>Document</title>
+    </head>
+    <body>
+        <nav id="navbar">
+            <header>HTML Document</header>
+            <ul>
+                <li class="no-point"><a href="#What_is_HTML?" class="nav-link">What is HTML?</a></li>
+                <li class="no-point"><a href="#Anatomy_of_an_HTML_element" class="nav-link">Anatomy of an HTML element</a></li>
+                <li class="no-point"><a href="#Nesting_elements" class="nav-link">Nesting elements</a></li>
+                <li class="no-point"><a href="#Attributes" class="nav-link">Attributes</a></li>
+                <li class="no-point"><a href="#Adding_some_features_to_an_HTML_document" class="nav-link">Adding some features to an HTML document</a></li>
+                <li class="no-point"><a href="#Summary" class="nav-link">Summary</a></li>
+                <li class="no-point"><a href="#Reference" class="nav-link">Reference</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="Introduction" id="Introduction">
+                <header>Getting started with HTML</header>
+                <p>In this documentation, we cover the absolute basics of HTML. To get you started, this documentation defines elements, attributes, and all the other important terms you may have heard. It also explains where these fit into HTML. You will learn how HTML elements are structured, how a typical HTML page is structured, and other important basic language features. Along the way, there will be an opportunity to play with HTML too!</p>
+                <p>Prerequisites:</p>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software" target="_blank">Basic software installed</a></li>
+                    <li>Basic knowledge of <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files" target="_blank">working with file</a></li>
+                </ul>
+                <p>Objective:</p>
+                <ul>
+                    <li>To gain basic familiarity with HTML</li>
+                    <li>Practice writing a few HTML elements</li>
+                </ul>
+            </section>
+            <section class="main-section" id="What_is_HTML?">
+                <header>What is HTML?</header>
+                <p>HTML (HyperText Markup Language) is a markup language that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of content to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to connect to another page, italicize words, and so on. For example, consider the following line of text:</p>
+                <code>My cat is very grumpy</code>
+                <p>If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph (&lt;p&gt;) element:</p>
+                <code>
+                    &lt;p&gt;My cat is very grumpy&lt;/p&gt;
+                </code>
+            </section>
+            <section class="main-section" id="Anatomy_of_an_HTML_element">
+                <header>Anatomy of an HTML element</header>
+                <p>Let's further explore our paragraph element from the previous section:</p>
+                <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png" alt="Example of usage p element in HTML">
+                <p>The anatomy of our element is:</p>
+                <ul>
+                    <li><span class="bold">The opening tag:</span> This consists of the name of the element (in this example, p for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the element begins or starts to take effect. In this example, it precedes the start of the paragraph text.</li>
+                    <li><span class="bold">The content:</span> This is the content of the element. In this example, it is the paragraph text.</li>
+                    <li><span class="bold">The closing tag:</span> This is the same as the opening tag, except that it includes a forward slash before the element name. This marks where the element ends. Failing to include a closing tag is a common beginner error that can produce peculiar results.</li>
+                </ul>
+                <p>The element is the opening tag, followed by content, followed by the closing tag</p>
+            </section>
+            <section class="main-section" id="Nesting_elements">
+                <header>Nesting elements</header>
+                <p>Elements can be placed within other elements. This is called nesting. If we wanted to state that our cat is very grumpy, we could wrap the word very in a &lt;strong&gt; element, which means that the word is to have strong(er) text formatting:</p>
+                <code>&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;</code>
+                <p>There is a right and wrong way to do nesting. In the example above, we opened the p element first, then opened the strong element. For proper nesting, we should close the strong element first, before closing the p.</p>
+                <p>The following is an example of the wrong way to do nesting:</p>
+                <code class="wrong-case">&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;</code>
+                <p>The tags have to open and close in a way that they are inside or outside one another. With the kind of overlap in the example above, the browser has to guess at your intent. This kind of guessing can result in unexpected results.</p>
+            </section>
+            <section class="main-section" id="Attributes">
+                <header>Attributes</header>
+                <p>Elements can also have attributes. Attributes look like this:</p>
+                <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-attribute-small.png" alt="Example of attribute in an element">
+                <p>Attributes contain extra information about the element that won't appear in the content. In this example, the class attribute is an identifying name used to target the element with style information.</p>
+                <p>An attribute should have:</p>
+                <ul>
+                    <li>A space between it and the element name. (For an element with more than one attribute, the attributes should be separated by spaces too.)</li>
+                    <li>The attribute name, followed by an equal sign.</li>
+                    <li>An attribute value, wrapped with opening and closing quote marks.</li>
+                </ul>
+                <code>
+                    &lt;p class="editor-note"&gt;My cat is very grumpy&lt;/p&gt;
+                </code>
+            </section>
+            <section class="main-section" id="Adding_some_features_to_an_HTML_document">
+                <header>Adding some features to an HTML document</header>
+                <p>If you want to experiment with writing some HTML on your local computer, you can:</p>
+                <ul>
+                    <li class="no-point">1. Copy the HTML page example listed above.</li>
+                    <li class="no-point">2. Create a new file in your text editor.</li>
+                    <li class="no-point">3. Paste the code into the new text file.</li>
+                    <li class="no-point">4. Save the file as index.html.</li>
+                </ul>
+                <p>You can now open this file in a web browser to see what the rendered code looks like. Edit the code and refresh the browser to see what the result is. Initially, the page looks like this:</p>
+                <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/template-screenshot.png" alt="">
+                <p>In this exercise, you can edit the code locally on your computer, as described previously, or you can edit it in the sample window below (the editable sample window represents just the contents of the <body> element, in this case). Sharpen your skills by implementing the following tasks:</p>
+                <ul>
+                    <li>Just below the opening tag of the body element, add a main title for the document. This should be wrapped inside an h1 opening tag and h1 closing tag.</li>
+                    <li>Edit the paragraph content to include text about a topic that you find interesting.</li>
+                    <li>Make important words stand out in bold by wrapping them inside a strong opening tag and strong closing tag</li>
+                    <li>Add a link to your paragraph, as explained earlier in the documentation.</li>
+                    <li>Add an image to your document. Place it below the paragraph, as explained earlier in the documentation. Earn bonus points if you manage to link to a different image (either locally on your computer or somewhere else on the web).</li>
+                </ul>
+                <p>If you make a mistake, you can always reset it using the Reset button. If you get really stuck, press the Show solution button to see the answer.</p>
+            </section>
+            <section class="main-section" id="Summary">
+                <header>Summary</header>
+                <p>You made it to the end of the documentation! We hope you enjoyed your tour of the basics of HTML</p>
+                <p>At this point, you should understand what HTML looks like, and how it works at a basic level. You should also be able to write a few elements and attributes. The subsequent documentations of this module go further on some of the topics introduced here, as well as presenting other concepts of the language.</p>
+                <p>As you start to learn more about HTML, consider learning the basics of CSS (Cascading Style Sheets). CSS is the language used to style web pages, such as changing fonts or colors or altering the page layout. HTML and CSS work well together, as you will soon discover.</p>
+            </section>
+            <section class="main-section" id="Reference">
+                <header>Reference</header>
+                <p>See the Reference of <a href="#">this documentation</a> at <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document">MDN</a></p>
+            </section>
+            
+        </main>
+    </body>
+</html>
+
